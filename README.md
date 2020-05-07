@@ -4,7 +4,9 @@ Time tracker app built with Nuxt.js and using Vuex.
 
 ![tracker_demo_gif](demo/tracker_demo.gif)
 
-Project route "/time_tracker"
+## Project route 
+
+"/time_tracker"
 
 ## Build Setup
 
