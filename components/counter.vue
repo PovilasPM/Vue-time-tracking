@@ -1,6 +1,15 @@
 <template>
   <div>
-    <h1>Total time</h1>
-    <p>00:00:00</p>
+    <p class="h2">Total time: <span class="h4 font-weight-normal">{{totalTime}}</span></p>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    totalTime() {
+      return this.$store.state.totalTime;
+    }
+  }
+}
+</script>

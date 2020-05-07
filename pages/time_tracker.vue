@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <taskInput></taskInput>
-    <taskList></taskList>
-    <counter></counter>
+  <div class="c-app-container d-flex w-100 justify-content-center align-items-center">
+    <div class="w-50 p-5">
+      <taskInput></taskInput>
+      <taskList v-if="tasks[0] !== undefined"></taskList>
+      <counter></counter>
+    </div>
   </div>
 </template>
 
@@ -12,6 +14,11 @@ import taskList from "~/components/task_list.vue";
 import counter from "~/components/counter.vue";
 
 export default {
+  computed: {
+    tasks() {
+      return this.$store.state.tasks;
+    }
+  },
   components: {
     taskInput,
     taskList,
@@ -19,3 +26,9 @@ export default {
   }
 };
 </script>
+
+<style lang="css" scoped>
+.c-app-container {
+  min-height: 100vh;
+}
+</style>
